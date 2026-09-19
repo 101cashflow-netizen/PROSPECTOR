@@ -1,4 +1,4 @@
-# 🎯 Prospector de Sites — v2.1.0
+# 🎯 Prospector de Sites — v2.1.3
 
 **Plugin para Claude (Cowork) que roda o ciclo completo de prospecção e venda de sites — com CRM local incluso:**
 
@@ -14,7 +14,7 @@ De graça, rodando no seu computador, sem mensalidade.
 | `/prospectar` | Varre o Google Maps: negócios nota ≥ 4.7 com site fraco E e-mail público → planilha no Google Sheets + CRM |
 | `/redesenhar` | Recria as páginas com estética premium (fotos/logo/conteúdo REAIS) + editor visual + comparador antes/depois |
 | `/editor` | Edita texto e imagem da página no navegador, sem código |
-| `/publicar` | Publica na HostGator SOZINHO (publicador automático, sem cPanel) + página-capa da proposta + HTTPS validado |
+| `/publicar` | Publica na Vercel SOZINHO (publicador automático, sem cPanel) + página-capa da proposta + HTTPS validado |
 | `/proposta` | E-mail com rapport real, checklist anti-spam e a capa personalizada como link |
 | `/respostas` | Lê seu Gmail e move o card sozinho quando o cliente responde (agende diário!) |
 | `/followup` | 3+ dias sem resposta? Gera o lembrete gentil — 1 por lead, nunca repete |
@@ -44,7 +44,7 @@ e reinicie o app — a versão certa é a **2.1.0** (confira em Gerenciar plugin
 
 ## Requisitos
 
-Claude Cowork · extensão Claude in Chrome · conectores Gmail e Google Drive · hospedagem HostGator (plano M+) · Python (para o dashboard e o publicador) · Windows ou Mac.
+Claude Cowork · extensão Claude in Chrome · conectores Gmail e Google Drive · hospedagem Vercel (plano Pro mas pode comecar com a Hobby) · Python (para o dashboard e o publicador) · Windows ou Mac.
 
 ## Manual
 
@@ -52,4 +52,4 @@ O `/setup` entrega o [manual completo](prospector-de-sites/manual.html) na sua p
 
 ---
 
-Feito por **Helio Arreche** · [YouTube](https://youtube.com/@helioarreche) · [Instagram @helioarreche](https://instagram.com/helioarreche) · Série completa do plugin no canal 🎬
+Feito por **Helio Arreche** · [YouTube](https://youtube.com/@helioarreche) · [Instagram @helioarreche](https://instagram.com/helioarreche) · Série completa do plugin no canal 🎬 Alterado para Vercel por **Jamilson Lima**
