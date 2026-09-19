@@ -52,8 +52,8 @@
     <button id="bDepois" class="on" onclick="ver('depois')">Nova versão</button>
   </div>
   <div class="frame">
-    <div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span id="urlLabel">__URL_NOVA__</span></div>
-    <iframe id="fDepois" src="__URL_NOVA__" title="Nova versão"></iframe>
+    <div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span id="urlLabel"></span></div>
+    <iframe id="fDepois" src="index.html" title="Nova versão"></iframe>
     <iframe id="fAntes" data-src="__URL_ANTIGA__" class="hide" title="Site atual"></iframe>
   </div>
 </div>
@@ -72,8 +72,9 @@ function ver(q){
   a.classList.toggle('hide',q!=='antes');d.classList.toggle('hide',q==='antes');
   document.getElementById('bAntes').classList.toggle('on',q==='antes');
   document.getElementById('bDepois').classList.toggle('on',q!=='antes');
-  document.getElementById('urlLabel').textContent=(q==='antes'?a.dataset.src:d.src);
+  document.getElementById('urlLabel').textContent=(q==='antes'?a.dataset.src:(location.host||'nova-versao'));
 }
+ver('depois');
 </script>
 <!--
 PLACEHOLDERS (substituir todos antes de publicar):
@@ -82,9 +83,9 @@ __AUTOR__          nome do usuário (config assinatura.nome)
 __AUTOR_URL__      nome do usuário URL-encoded para o texto do wa.me
 __APRESENTACAO__   apresentação curta (config assinatura.apresentacao)
 __WHATSAPP__       WhatsApp do USUÁRIO no formato 55DDDNUMERO (config assinatura.whatsapp)
-__URL_NOVA__       URL pública https da página nova (https://dominio/clientes/[slug]/)
+(não há placeholder para a URL da página nova: o iframe usa index.html, ao lado da capa, e a barra mostra o endereço real via JavaScript)
 __URL_ANTIGA__     URL do site atual do cliente (com http/https)
-Publicar como proposta.html na MESMA pasta do site novo: [pastaBase]/[slug]/proposta.html
+Publicar como proposta.html na MESMA pasta do site novo, na raiz do projeto do lead: [slug]/proposta.html
 Nota: alguns sites antigos bloqueiam iframe (X-Frame-Options); o iframe "antes" carrega
 sob demanda — se ficar em branco, trocar __URL_ANTIGA__ por um screenshot do site antigo
 (sites/[slug]/antigo.png publicado junto) usando <img> no lugar do iframe.
